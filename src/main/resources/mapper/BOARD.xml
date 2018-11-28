@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.BOARD">
+	<select id="boardSelect" resultType="com.example.demo.vo.BoardVO">
+		select * from bdi.board
+	</select>
+	<insert id="boardInsert" parameterType="com.example.demo.vo.BoardVO">
+		insert into bdi.board
+		values(#{bnum},#{btitle},#{bcontent},#{bcredat},#{bcretim})
+	</insert>
+	
+</mapper>
